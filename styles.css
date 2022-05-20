@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montez&family=Poppins:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width:thin;
+    scrollbar-color: rgba(0,0,0,0.6) transparent;
+}
+    
+    *::-webkit-scrollbar{
+        width:6px;
+    }
+    *::-webkit-scrollbar-track{
+        background:transparent;
+    }
+    
+    *::-webkit-scrollbar-thumb{
+        background-color: rgba(0,0,0,0.8) ;
+        border-radius: 15px;
+        border: transparent;
+    }
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Nav bar styles*/
+nav{
+    min-height: 10vh;
+    background-color: #131c27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index:4;
+}
+nav h1{
+    color:rgb(237, 219, 219);
+    font-size:3.25rem;
+    flex:1;
+    margin-left:4rem;
+    font-family: 'Montez', cursive;
+}
+
+nav h1 a{
+    text-decoration: none;
+}
+nav h1 a:visited{
+    color:white;
+}
+
+.nav_list{
+    display: flex;
+    margin-right: 3rem;
+    list-style:none;
+}
+.nav_list li a {
+    color:rgb(237, 219, 219);
+    font-size:1.8rem;
+    text-decoration: none;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+
+.nav_list li a:hover{
+    color: white;
+}
+
+
+/*Hero Section Styles*/
+
+.hero{
+    min-height: 90vh;
+    font-family: 'Lato',sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.7),transparent),url('./img/landing-page.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    color:white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+.hero h1{
+    font-size:4rem;
+    padding: 2rem;
+}
+
+.hero h3{
+    font-size:1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding:1.5rem;
+}
+.hero button{
+    border: none;
+    background-color: #376375;
+    color:white;
+    font-size: 2rem;
+    padding:1.25rem;
+    margin-top:5rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in;
+}
+.hero button:hover{
+    background-color: #153e4e;
+}
+
+/* Location Section styles */
+
+.location{
+    position: relative;
+}
+
+.location-top{
+    min-height:90vh;
+    overflow-x: hidden;
+
+    background-image: linear-gradient(rgba(0,0,0,0.7),transparent),url('./img/new-york-page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cloud{
+    height: 30rem;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.cloud1{
+    animation: cloudAnimation 4s ease-in-out 0s infinite alternate;
+}
+
+.cloud2{
+    top:15%;
+    z-index: -2;
+    opacity: 0.6;
+    animation: cloudAnimation 3s ease-in-out 0s infinite alternate;
+
+}
+.location-top-text{
+    position: relative;
+    top:20rem;
+    margin-left: 4rem;
+    
+}
+
+.location-top-text h1{
+    font-size:4rem;
+    text-decoration: underline;
+}
+
+.location-top-text h3{
+    font-size:1.5rem;
+    padding-top: 2rem;
+}
+.location-bottom{
+    background-color: #131c27;
+    color:white;
+    height: 25vh;
+    padding:0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.location-bottom h1{
+    margin-top: 2rem;
+    font-size: 3.75rem;
+}
+
+.location-bottom h3{
+    font-size:1.55rem;
+    padding:2.25rem;
+}
+
+ 
+/*Benefits Section styles */
+.benefits{
+    background-color: #717171;
+    min-height:50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.travel,.sleep,.fly{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px -8px 20px #151515;
+    flex: 0 0 10rem;
+    margin:2rem;
+}
+
+.card-image{
+    min-height: 10rem;
+    min-width: 20rem;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img{
+    height: 6rem;
+}
+
+.card-text h1{
+    font-size:2.5rem;
+    text-align: center; 
+    padding:1.5rem;   
+}
+
+.card-text h3{
+    font-size:1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* Form Section styles */
+
+.form{
+    min-height:80vh;
+
+    
+    background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.3)),url('./img/contact-mountain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    min-height: 50vh;
+    min-width: 60vh;
+
+     backdrop-filter: blur(18px) saturate(172%);
+    -webkit-backdrop-filter: blur(18px) saturate(172%); 
+    background-color: rgba(155, 155, 155, 0); 
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    position: relative;
+}
+
+.form-container h1{
+    padding:2rem;
+    color: white;
+    font-size:3rem;
+    text-align: center;
+}
+
+.form-container label{
+    padding:2rem;
+    font-size:2rem;
+    color:white;
+    font-family: 'Lato',sans-serif;
+}
+
+.form-container input{
+    width:60%;
+    position: absolute;
+    right:2rem;
+    font-size:1.75rem;
+    outline: none;
+    opacity: 0.6;
+}
+
+
+.name-section,.email-section{
+    margin-top:3rem;
+}
+
+.form-container button{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    padding:0.75rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #213650;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size:1.5rem;
+    cursor: pointer;
+    transition: background-color 0.35s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+.form-container button:hover{
+    background-color: #1b2b3e;
+}
+
+
+/* Footer section styles */
+footer{
+    min-height: 10vh;
+    background-color: #151515;
+    color: white;
+}
+
+footer h1{
+    text-align: center;
+    padding:0.75rem;
+}
+
+footer .social-handles{
+    display: flex;
+    justify-content: space-around;
+    padding:0.5rem;
+    cursor: pointer;
+}
+
+
+
+/* animations */
+
+@keyframes cloudAnimation{
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(0%,0%);
+    }
+}
+
+
+/*media queries*/
+
+@media only screen and (max-width:500px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width:thin;
+        scrollbar-color: rgba(0,0,0,0.6) transparent;
+    }
+    
+    *::-webkit-scrollbar{
+        width:6px;
+    }
+    *::-webkit-scrollbar-track{
+        background:transparent;
+    }
+    
+    *::-webkit-scrollbar-thumb{
+        background-color: rgba(0,0,0,0.8) ;
+        border-radius: 15px;
+        border: transparent;
+    }
+
+    nav h1{
+        font-size:3rem;
+        margin-left:1.25rem;
+    }
+
+    .nav_list li a {
+        font-size:1.5rem;
+        padding: 1rem;
+    }
+
+    .hero{
+        background-position:auto;
+    }
+    
+    .hero h1{
+        font-size:3rem;
+        padding: 1rem;
+        margin-top:10rem;
+    }
+    
+    .hero h3{
+        font-size:1.5rem;
+        padding:2rem;
+    }
+
+    .location-bottom{
+        padding:0.5rem;
+    }
+    
+    .location-bottom h1{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    
+    .location-bottom h3{
+        font-size:1.5rem;
+        padding:2rem;
+    }
+    
+    .form-container{
+        min-height: 30rem;
+        min-width: 90%;
+        position: relative;
+        overflow-y: auto;
+    }
+    
+    .form-container h1{
+        padding:2rem;
+        color: white;
+        font-size:3rem;
+        text-align: center;
+    }
+    
+    .form-container label{
+        padding:2rem;
+        font-size:2rem;
+        color:white;
+        font-family: 'Lato',sans-serif;
+    }
+    
+    .form-container input{
+        width:60%;
+        position: absolute;
+        right:2rem;
+        font-size:1.75rem;
+        outline: none;
+        opacity: 0.6;
+    }
+    
+    
+    .name-section,.email-section{
+        margin-top:3rem;
+    }
+
+}
